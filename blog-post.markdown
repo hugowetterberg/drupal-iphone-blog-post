@@ -3,12 +3,9 @@ iPhone development & Drupal
 
 This is a guide to integrating a iPhone application with Drupal using the services module with the REST server and OAuth authentication. First off we have some prerequisites (except those required by Drupal):
 
-* A Mac, yep, this is about _iPhone_ development, no cruddy windows machines here. Feel free to do the drupal bit on any \*nix system though.
-  * http://store.apple.com
-* The iPhone SDK
-  * http://developer.apple.com/iphone/
-* Git
-  * http://git-scm.com/
+* [A Mac](http://store.apple.com), yep, this is about _iPhone_ development, no cruddy windows machines here. Feel free to do the drupal bit on any \*nix system though.
+* [The iPhone SDK](http://developer.apple.com/iphone/)
+* [Git](http://git-scm.com/)
   * If you don't have it, install using port, fink, tarball or whatever takes your fancy
 
 You can get by without git, just download the zip- or tar-balls off github and place them in the same places as the clones or submodules.
@@ -43,7 +40,7 @@ The reason that I create a logs directory is that my vhost setup always looks li
         </Directory>
     </VirtualHost>
 
-...and Apache becomes cranky if it's log directory doesn't exist. Needless to say, you need to set up the site so that Apache knows about it (add vhost, restart et cetera) and add a hosts entry to get your dev-domain working locally. I use Hoster (http://www.redwinder.com/macapp/hoster/) to manage my hosts file, but manual editing of the /etc/hosts file works just as well.
+...and Apache becomes cranky if it's log directory doesn't exist. Needless to say, you need to set up the site so that Apache knows about it (add vhost, restart et cetera) and add a hosts entry to get your dev-domain working locally. I use [Hoster](http://www.redwinder.com/macapp/hoster/) to manage my hosts file, but manual editing of the /etc/hosts file works just as well.
 
 Install Drupal as usual and remove write permissions from settings.php.
 
@@ -272,7 +269,7 @@ If you run the app in the simulator now you should see the authorization view an
     }
 
 
-<div style="float: left; margin-right: 10px; background-color: #000000; padding: 5px">![Info image](info.png)</div> Download this info image and add it to your project (The Resources folder is a good place to put it). Many of the interface element images in the iPhone are, like this image, purely alpha-channel oriented. Adding images to your project will automatically make them available to be referenced in code like this and selected for use in interface builder.
+Download this [info image](info.png) and add it to your project (The Resources folder is a good place to put it). Many of the interface element images in the iPhone are, like this image, purely alpha-channel oriented. Adding images to your project will automatically make them available to be referenced in code like this and selected for use in interface builder.
 
 ### The authorization process
 
