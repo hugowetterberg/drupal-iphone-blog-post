@@ -116,17 +116,17 @@ Creating the interface
 
 The first thing we want our app to do is to get authorized by the user. So lets create a view for that. Right-click on Resources and add a new file. 
 
-![Add file](add-file.png)
+![Add file](/sites/default/files/drupaliphone/add-file.png)
 
 Choose the View XIB template and call your XIB "AuthorizationView.xib". Then double click on it to open it up in Interface Builder. Drag two buttons and a label to the view and play around with the styling, positioning et cetera.
 
 This is what we want to attain:
 
-![Authorize me!](authorization-view.png)
+![Authorize me!](/sites/default/files/drupaliphone/authorization-view.png)
 
 One button for requesting authorization and one for resetting the authorization. And a label with a cheerful message that we can display when the process is finished. The only slightly tricky thing here is how to get the pin-striped background. Select the view and choose the "groupTableViewBackgroundColor" from the iPhone SDK palette.
 
-![Pin-stripes](pin-stripes.png)
+![Pin-stripes](/sites/default/files/drupaliphone/pin-stripes.png)
 
 Starting the coding
 ---------------------------------------
@@ -168,7 +168,7 @@ Now we should add _IBOutlets_ for the objects in the view that the controller ne
 
     @end
 
-Then switch to the .m-file, use the cmd-opt-up shortcut (![Cmd-Opt-UpArrow](shortcut-for-dummies.png)), or all the manual switching will drive you insane.
+Then switch to the .m-file, use the cmd-opt-up shortcut (![Cmd-Opt-UpArrow](/sites/default/files/drupaliphone/shortcut-for-dummies.png)), or all the manual switching will drive you insane.
 
 The .m file contains a lot of placeholder stuff that's either empty or completely commented out. The __-init(WithNibName)__ method is the equivalent of a constructor in objective-c. Although you shouldn't do too much there in controller classes, as the view isn't ready on init. Another reason is that your view object might be released if the iPhone is short on memory and if your view isn't currently displayed. So all setup relating to the view (or any of the _IBOutlet_ variables) should be done in __-viewDidLoad__.
 
@@ -224,11 +224,11 @@ Uncomment the -viewDidLoad method and add the following:
 
 What we've done so far is to define what types of interface elements our controller can handle, and what is should do with them. But we still have to hook up the actual elements in our xib to the outlets and actions in the controller. Open up AuthorizationView.xib and select "File's Owner" and, select the (i) section of the inspector, and write the name of the view controller class in the Class field.
 
-![Controller class](controller-class.png)
+![Controller class](/sites/default/files/drupaliphone/controller-class.png)
 
 Then open up the connections section in the inspector and start connecting the outlets to the interface elements. Connect the requestAuthorization resetAuthorization actions to the "Touch up inside" events of the respective buttons. Also make sure that the view outlet is connected to the top level view.
 
-![Connect outlets](connecting-outlets.png)
+![Connect outlets](/sites/default/files/drupaliphone/connecting-outlets.png)
 
 Now we're going to make our view show up when we start the application. If you run it in the simulator now everything will (hopefully) compile but you'll still only get the blank white screen. To do something about that, add a IBOutlet (instance variable & property) for a UITabBarController in your app delegate header file (DrupalAppAppDelegate.h). Yep, this is a test. Take a look at the AuthorizationViewController to see how it should be done.
 
@@ -269,7 +269,7 @@ If you run the app in the simulator now you should see the authorization view an
     }
 
 
-Download this [info image](info.png) and add it to your project (The Resources folder is a good place to put it). Many of the interface element images in the iPhone are, like this image, purely alpha-channel oriented. Adding images to your project will automatically make them available to be referenced in code like this and selected for use in interface builder.
+Download this [info image](/sites/default/files/drupaliphone/info.png) and add it to your project (The Resources folder is a good place to put it). Many of the interface element images in the iPhone are, like this image, purely alpha-channel oriented. Adding images to your project will automatically make them available to be referenced in code like this and selected for use in interface builder.
 
 ### The authorization process
 
@@ -314,7 +314,7 @@ Great! You should now have a fully working OAuth workflow. Try it out by startin
 
 Now we're going to create a NodeListController. Right-click on "Classes" and add a UITableViewController subclass just as you did with the AuthorizationViewController.
 
-![Add a table view controller class](table-view-controller.png)
+![Add a table view controller class](/sites/default/files/drupaliphone/table-view-controller.png)
 
 Open the header file for the NodeListController add a #import for RESTClient. A RESTClient and a NSArray instance variable and a init method that takes a rest client in addition to the standard style argument.
 
