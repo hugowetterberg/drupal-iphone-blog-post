@@ -1,7 +1,7 @@
 iPhone development & Drupal
 =======================================
 
-Ok, first off we have some prerequisites (except those required by Drupal):
+This is a guide to integrating a iPhone application with Drupal using the services module with the REST server and OAuth authentication. First off we have some prerequisites (except those required by Drupal):
 
 * A Mac, yep, this is about _iPhone_ development, no cruddy windows machines here. Feel free to do the drupal bit on any \*nix system though.
   * http://store.apple.com
@@ -10,6 +10,8 @@ Ok, first off we have some prerequisites (except those required by Drupal):
 * Git
   * http://git-scm.com/
   * If you don't have it, install using port, fink, tarball or whatever takes your fancy
+
+You can get by without git, just download the zip- or tar-balls off github and place them in the same places as the clones or submodules.
 
 Getting the basics up and running
 ---------------------------------------
@@ -433,6 +435,16 @@ Finally we need to set up the rest client in the application delegate. The REST 
 
 That's it. It's a simple application, but it integrates properly with Drupal using OAuth and REST, hopefully it'll get you started. There will be a part 2 of this guide, that will add support for write operations (node creation and updating) and maybe some image uploading as well.
 
+The code and database dump
+---------------------------------------
+
 There are three repositories that accompanies this blog post:
 
 * The iPhone application
+  * http://github.com/hugowetterberg/drupal-iphone-app
+* The Drupal site
+  * http://github.com/hugowetterberg/drupal-iphone-site
+* The blog post and database dump
+  * http://github.com/hugowetterberg/drupal-iphone-blog-post
+
+Remember to to run `git submodule update --init` when you check out the drupal repo, many of the used drupal modules are included as submodules.
