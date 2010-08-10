@@ -1,6 +1,13 @@
 iPhone development & Drupal
 =======================================
 
+> **Note**: This blog post haven't been updated in a while, but the code and database dump has. If you've learned a lot (or enough) from this post and want to give back to others in the Drupal and iPhone dev community you can fork the blog-post on github and update it.
+>
+> The blog post is licensed under CC 3.0 Attribution-NonCommercial-ShareAlike, all the Drupal code is (of course) GPLv2 and the iPhone code is distributed under the MIT license. 
+>
+> The Drupal install has been updated to services 3.x and the iPhone project has been updated to work with 4.0 and a newer revision of HBaseLibrary.
+
+
 This is a guide to integrating a iPhone application with Drupal using the services module with the REST server and OAuth authentication. First off we have some prerequisites (except those required by Drupal):
 
 * [A Mac](http://store.apple.com), yep, this is about _iPhone_ development, no cruddy windows machines here. Feel free to do the drupal bit on any \*nix system though.
