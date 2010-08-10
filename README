@@ -1,3 +1,5 @@
 Blog post about integrating a iPhone application with Drupal using the services module with the REST server and OAuth authentication.
 
+There is one account in the Drupal install in the database dump. Log in with Admin / pass.
+
 Licensed under the Attribution-NonCommercial-ShareAlike 3.0 Unported license, see LICENSE and http://creativecommons.org/licenses/by-nc-sa/3.0/
